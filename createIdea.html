@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Hui Lu">
+
+    <title>MG Start Up - Create Idea</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link href="IPCSS.css" rel="stylesheet">
+
+
+
+</head>
+
+<body id="page-top" class="create">
+
+    <!-- Navigation -->
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-coll">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">MG·Start Up</a>
+            </div>
+        <div class="collapse navbar-collapse" id="nav-coll">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="allideas.html"><span class="glyphicon glyphicon-globe"></span></a>
+                    </li>
+
+                    <li>
+                        <a href="userpage.html"><span class="glyphicon glyphicon-user"></span> My Page </a>
+                    </li>
+
+                    <li> 
+                    <form action="logout.php" method="POST">
+                        <a href="idealogin.html"><span class="glyphicon glyphicon-log-out"></span></a>
+                    </form> 
+                    </li>
+                    <li>  
+                        <a href="createidea.html"><span class="glyphicon glyphicon-edit"></span></a>
+                    </li>
+                </ul>
+        </div>
+    </nav>
+
+
+    <!-- Header -->
+    <h1>
+        <div class="header-title">-·- New Idea -·-</div>
+    </h1>
+
+    <!-- content -->
+    <div class="container">
+            <form action="createidea.php" method="POST" class="form-horizontal idea-creation" role="form">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label" > Title </label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" placeholder="* title of idea" name="title" required data-validation-required-message="Please enter the title of your idea.">
+                    </div>
+
+                </div>
+                <p class="help-block text-danger"></p>
+                <hr>
+                <div class="form-group">
+                    <label for="description" class="col-sm-3 control-label"> Description </label>
+                    <div class="col-md-9">
+                        <textarea class="form-control" placeholder="Short description..." name ="description" required data-validation-required-message="Please enter the description."></textarea>
+                    </div>
+                </div>
+                <p class="help-block text-danger"></p>
+                <hr>
+                <div class="form-group">
+                    <label for="industry" class="col-sm-3 control-label"> Industry </label>
+                    <div class="col-md-9">
+                        <select class="form-control" id="industry" name="industry">
+                            <option disabled="selectone"> - Select one - </option>
+                            <option value="education"> Education </option>
+                            <option value="finance"> Finance </option>
+                            <option value="garden"> Gardening </option>
+                            <option value="music"> Music </option>
+                            <option value="technology"> Technology </option>
+                            <option value="travel"> Travel </option>
+                        </select>
+                    </div>
+                </div>
+                <p class="help-block text-danger"></p>
+                <hr>
+                <div class="form-group">
+                    <label for="description" class="col-sm-3 control-label"> Add Tag </label>
+                    <div class="col-md-9">
+                        <input type="text" data-role=value="keywords" class="form-control" placeholder="Add tags" name="addtag">
+                        <!-- how to get it work -->
+                    </div>
+                </div>
+                <p class="help-block text-danger"></p>
+                <div class="form-group">
+                    <label for="description" class="col-sm-3 control-label"> Choose Tag </label>
+                    <div class="col-sm-9">
+                        <select name="choosetag"class="form-control" multiple>
+                            <option value="canada">#Canada</option>
+                            <option value="history">#History</option>
+                            <option value="kpop">#Kpop</option>
+                            <option value="womenhealth">#flower</option>
+                        </select>
+                 <!--   <div class="col-md-8">
+                        <button type="button" class ="btn btn-info"> Math </button>
+                        <button type="button" class ="btn btn-info"> K-pop </button>
+                        <button type="button" class ="btn btn-info"> Women's Health </button>
+                        <button type="button" class ="btn btn-info"> History </button>
+                        <button type="button" class ="btn btn-info"> Canada </button>
+                        
+                    </div> -->
+                    </div>
+                </div>
+                <p class="help-block text-danger"></p>
+                <hr>
+                <div class="col-lg-12 text-center">
+                    <div id="success"></div>
+                    <button type="submit" class="btn btn-default btn-md"> Create </button>
+                </div>
+ 
+                <div class="clearfix"></div>
+               <!-- </div> -->
+            </form>
+    </div>
+
+
+    <footer>
+        <span class="copyright">Copyright &copy; MG-LH 2015</span>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
